@@ -3,7 +3,9 @@
 ## Usage
 > You need to initially login with ocp login, this will only update your token
 
-Define your clusters in `~/.ocplogin/clusters.json`
+1. Download ocplogin from [github](https://github.com/danielr1996/ocplogin/releases) and put it on your `PATH`
+
+2. Define your clusters in `~/.ocplogin/clusters.json`
 ```shell
 # 
 cat <<EOF > ~/.ocplogin/clusters.json
@@ -16,19 +18,19 @@ cat <<EOF > ~/.ocplogin/clusters.json
 EOF
 ```
 
-Generate a new encryption key (used to encrypt your credentials, stored in `~/.ocplogin/encryptionkey.json`
+3. Generate a new encryption key (used to encrypt your credentials, stored in `~/.ocplogin/encryptionkey.json`
 > Don't share this key with anyone, because it allows to decrypt your credentials
 
 ```shell
 ocplogin generatekey
 ```
 
-Provide your credentials, they will be encrypted and stored in `~/.ocplogin/credentials.json`
+4. Provide your credentials, they will be encrypted and stored in `~/.ocplogin/credentials.json`
 ```shell
 ocplogin login
 ```
 
-Fetch new tokens with:
+5. Fetch new tokens with:
 ```shell
 ocplogin
 ```
